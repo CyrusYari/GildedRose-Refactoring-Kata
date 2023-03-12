@@ -3,6 +3,7 @@ import { Item, GildedRose } from '@/gilded-rose';
 
 
 describe("Gilded Rose", () => {
+
   describe("Everything else", () => {
     it("Should degrade the quality of an item twice as fast after SellIn date has passed", () => {
       const gildedRose = new GildedRose([new Item("protein bar", 0, 4)]);
@@ -24,11 +25,8 @@ describe("Gilded Rose", () => {
       expect(items[0].sellIn).toBe(4);
       expect(items[0].quality).toBe(50);
     })
-
-   
-
-
   });
+
 
   describe("Aged Brie", () => {
     it("Increases in quality the older it gets", () => {
@@ -44,9 +42,8 @@ describe("Gilded Rose", () => {
       expect(items[0].sellIn).toBe(-2);
       expect(items[0].quality).toBe(4);
     });
-
-
   });
+
 
   describe("Sulfuras, Hand of Ragnaros", () => {
     it("Never has to be sold or increases in quality", () => {
@@ -56,6 +53,7 @@ describe("Gilded Rose", () => {
       expect(items[0].quality).toBe(80);
     })
   });
+
 
   describe("Backstage passes to a TAFKAL80ETC concert", () => {
     it("Increases in quality as its SellIn value approaches", () => {
@@ -87,6 +85,7 @@ describe("Gilded Rose", () => {
     });
   });
 
+  
   describe("Conjured Items", () => {
     it("Degrades in quality twice as fast as normal item", () => {
       const gildedRose = new GildedRose([new Item("Conjured", 3, 6)]);
