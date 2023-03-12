@@ -45,13 +45,6 @@ describe("Gilded Rose", () => {
       expect(items[0].quality).toBe(4);
     });
 
-    it("Case being Aged Brie should invoke the updateBrie function passing in item", () => {
-      const gildedRose = new GildedRose([new Item("Aged Brie", -1, 2)]);
-      const items = gildedRose.updateQuality();
-      expect(items[0].sellIn).toBe(-2);
-      expect(items[0].quality).toBe(4);
-
-    });
 
   });
 

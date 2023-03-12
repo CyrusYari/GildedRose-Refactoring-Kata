@@ -90,7 +90,7 @@ export class GildedRose {
         case ItemTypes.PASS:
           updatePass(item);
           continue;
-      case ItemTypes.CONJ:
+        case ItemTypes.CONJ:
           updateConj(item);
           continue;  
         default:
